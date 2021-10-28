@@ -6,61 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>339</width>
-    <height>416</height>
+    <width>756</width>
+    <height>256</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="czysc">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Oblicz połączenie szerogowo</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>320</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Oblicz połączenie równolegle</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>260</y>
-      <width>311</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>220</y>
+      <y>150</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -69,11 +27,11 @@
      <string>Wyczyść pola</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="dodatkowy">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>360</y>
+      <x>110</x>
+      <y>150</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -82,7 +40,7 @@
      <string>Dodatkowy rezystor</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <widget class="QDoubleSpinBox" name="R1">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -98,11 +56,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="konduktancja">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>360</y>
+      <x>340</x>
+      <y>150</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -111,7 +69,7 @@
      <string>Oblicz konduktancję</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+   <widget class="QDoubleSpinBox" name="R2">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -127,7 +85,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+   <widget class="QDoubleSpinBox" name="R3">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -143,7 +101,39 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+   <widget class="QDoubleSpinBox" name="R4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="R5">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="R6">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -159,7 +149,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_5">
+   <widget class="QDoubleSpinBox" name="R7">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -175,7 +165,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+   <widget class="QDoubleSpinBox" name="R8">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -191,11 +181,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_7">
+   <widget class="QDoubleSpinBox" name="R9">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>150</y>
+      <x>340</x>
+      <y>80</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -207,11 +197,33 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_8">
+   <widget class="QLabel" name="Suma1">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>150</y>
+      <x>600</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="R10">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>80</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -223,17 +235,23 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_9">
+   <widget class="QLabel" name="Suma2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>150</y>
-      <width>101</width>
+      <x>600</x>
+      <y>80</y>
+      <width>141</width>
       <height>61</height>
      </rect>
     </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>0</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

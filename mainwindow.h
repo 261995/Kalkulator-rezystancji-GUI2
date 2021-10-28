@@ -15,6 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_R1_valueChanged(double arg1);
+
+    void on_R2_valueChanged(double arg1);
+
 private:
     Ui::MainWindow *ui;
 };
