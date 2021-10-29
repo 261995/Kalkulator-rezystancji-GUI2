@@ -45,7 +45,6 @@ private slots:
     void on_czysc_2_clicked();
 
     void on_dodatkowe_2_clicked();
-
 private:
     Ui::MainWindow *ui;
 };

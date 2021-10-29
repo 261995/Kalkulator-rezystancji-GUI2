@@ -53,7 +53,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Oblicz konduktancję</string>
+     <string>Oblicz konduktancję:</string>
     </property>
    </widget>
    <widget class="QDoubleSpinBox" name="R2">
@@ -113,6 +113,9 @@
       <height>61</height>
      </rect>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
@@ -137,6 +140,9 @@
       <width>111</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -451,6 +457,9 @@
       <height>61</height>
      </rect>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
@@ -472,6 +481,9 @@
       <width>111</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -512,7 +524,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Oblicz konduktancję</string>
+     <string>Oblicz konduktancję:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dodatkowe_2">
