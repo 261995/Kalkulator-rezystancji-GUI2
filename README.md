@@ -3,5 +3,5 @@
 -obliczanie rezystancji szeregowo  
 -pobliczanie rezystancji równolegle  
 -dodatkowe miejsca na rezystory po wciśnięciu przycisku  
--przeliczanie na konduktancje  
+-zapis i odczyt z pliku
 -czyszczenie zapisanych rezystorów
