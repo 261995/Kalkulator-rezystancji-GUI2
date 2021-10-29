@@ -13,6 +13,8 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    int i = 0;
+    int j = 0;
     ~MainWindow();
 
 private slots:
@@ -37,6 +39,12 @@ private slots:
     void on_R5_2_valueChanged(double arg1);
 
     void on_czysc_clicked();
+
+    void on_dodatkowe_clicked();
+
+    void on_czysc_2_clicked();
+
+    void on_dodatkowe_2_clicked();
 
 private:
     Ui::MainWindow *ui;

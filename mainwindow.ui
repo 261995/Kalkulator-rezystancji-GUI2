@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>380</height>
+    <width>722</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="czysc">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>290</y>
+      <x>20</x>
+      <y>160</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QDoubleSpinBox" name="R1">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>70</y>
+      <x>20</x>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -46,10 +46,10 @@
    <widget class="QPushButton" name="konduktancja">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>150</y>
-      <width>111</width>
-      <height>31</height>
+      <x>420</x>
+      <y>170</y>
+      <width>151</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -59,8 +59,8 @@
    <widget class="QDoubleSpinBox" name="R2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>70</y>
+      <x>130</x>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -75,8 +75,8 @@
    <widget class="QDoubleSpinBox" name="R3">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>70</y>
+      <x>240</x>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -91,8 +91,8 @@
    <widget class="QDoubleSpinBox" name="R4">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>70</y>
+      <x>350</x>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -107,8 +107,8 @@
    <widget class="QLabel" name="Suma1">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>70</y>
+      <x>580</x>
+      <y>90</y>
       <width>111</width>
       <height>61</height>
      </rect>
@@ -132,8 +132,8 @@
    <widget class="QLabel" name="Suma2">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>220</y>
+      <x>580</x>
+      <y>330</y>
       <width>111</width>
       <height>61</height>
      </rect>
@@ -154,8 +154,8 @@
    <widget class="QDoubleSpinBox" name="R5">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>70</y>
+      <x>460</x>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -170,8 +170,8 @@
    <widget class="QDoubleSpinBox" name="R1_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>220</y>
+      <x>20</x>
+      <y>330</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -186,8 +186,8 @@
    <widget class="QDoubleSpinBox" name="R4_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>220</y>
+      <x>350</x>
+      <y>330</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -202,8 +202,8 @@
    <widget class="QDoubleSpinBox" name="R2_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>220</y>
+      <x>130</x>
+      <y>330</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -218,8 +218,8 @@
    <widget class="QDoubleSpinBox" name="R5_2">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>220</y>
+      <x>460</x>
+      <y>330</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -234,8 +234,8 @@
    <widget class="QDoubleSpinBox" name="R3_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>220</y>
+      <x>240</x>
+      <y>330</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -250,11 +250,11 @@
      <double>0.000000000000000</double>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="I1">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
+      <x>20</x>
+      <y>70</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -266,11 +266,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="I1_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>200</y>
+      <x>20</x>
+      <y>310</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -282,11 +282,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="I2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>50</y>
+      <x>130</x>
+      <y>70</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -298,11 +298,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="I2_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>200</y>
+      <x>130</x>
+      <y>310</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -314,11 +314,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="I3">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>50</y>
+      <x>240</x>
+      <y>70</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -330,11 +330,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="I4">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>50</y>
+      <x>350</x>
+      <y>70</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -346,11 +346,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="I5">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>50</y>
+      <x>460</x>
+      <y>70</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -362,11 +362,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="I4_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>200</y>
+      <x>350</x>
+      <y>310</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -378,11 +378,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="I3_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>200</y>
+      <x>240</x>
+      <y>310</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -394,11 +394,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="I5_2">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>200</y>
+      <x>460</x>
+      <y>310</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -413,8 +413,8 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>50</y>
+      <x>580</x>
+      <y>70</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -429,8 +429,8 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>200</y>
+      <x>580</x>
+      <y>310</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -445,8 +445,8 @@
    <widget class="QLabel" name="Suma2_2">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>290</y>
+      <x>580</x>
+      <y>400</y>
       <width>111</width>
       <height>61</height>
      </rect>
@@ -467,8 +467,8 @@
    <widget class="QLabel" name="Suma1_2">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>140</y>
+      <x>580</x>
+      <y>160</y>
       <width>111</width>
       <height>61</height>
      </rect>
@@ -487,6 +487,96 @@
     </property>
     <property name="Double" stdset="0">
      <double>0.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dodatkowe">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>160</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dodaj/usuń dodatkowe rezystory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="konduktancja_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>410</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Oblicz konduktancję</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dodatkowe_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>400</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dodaj/usuń dodatkowe rezystory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="czysc_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wyczyść pola</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>671</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 28pt rgb(0, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string>Szeregowo:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>671</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 28pt rgb(0, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string>Równolegle</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

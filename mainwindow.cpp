@@ -7,6 +7,25 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->R3->setVisible(false);
+    ui->R4->setVisible(false);
+    ui->R5->setVisible(false);
+
+    ui->I3->setVisible(false);
+    ui->I4->setVisible(false);
+    ui->I5->setVisible(false);
+
+    ui->R3_2->setVisible(false);
+    ui->R4_2->setVisible(false);
+    ui->R5_2->setVisible(false);
+
+    ui->I3_2->setVisible(false);
+    ui->I4_2->setVisible(false);
+    ui->I5_2->setVisible(false);
+
+    ui->Suma1_2->setVisible(false);
+    ui->Suma2_2->setVisible(false);
+
 }
 
 MainWindow::~MainWindow()
@@ -102,10 +121,89 @@ void MainWindow::on_czysc_clicked()
     ui->R3->setValue(0);
     ui->R4->setValue(0);
     ui->R5->setValue(0);
+
+}
+
+
+void MainWindow::on_dodatkowe_clicked()
+{
+    i++;
+    if (i==1)
+    {
+        ui->R3->setVisible(true);
+    }
+    if (i==2)
+    {
+        ui->R4->setVisible(true);
+    }
+    if (i==3)
+    {
+        ui->R5->setVisible(true);
+    }
+    if (i==3)
+    {
+        ui->R5->setVisible(true);
+    }
+    if (i==4)
+    {
+        ui->R5->setVisible(false);
+        ui->R5->setValue(0);
+    }
+    if (i==5)
+    {
+        ui->R4->setVisible(false);
+        ui->R4->setValue(0);
+    }
+    if (i==6)
+    {
+        ui->R3->setVisible(false);
+        ui->R3->setValue(0);
+        i=0;
+    }
+
+}
+
+
+void MainWindow::on_czysc_2_clicked()
+{
     ui->R1_2->setValue(0);
     ui->R2_2->setValue(0);
     ui->R3_2->setValue(0);
     ui->R4_2->setValue(0);
     ui->R5_2->setValue(0);
+}
+
+
+void MainWindow::on_dodatkowe_2_clicked()
+{
+    j++;
+    if (j==1)
+    {
+        ui->R3_2->setVisible(true);
+    }
+    if (j==2)
+    {
+        ui->R4_2->setVisible(true);
+    }
+    if (j==3)
+    {
+        ui->R5_2->setVisible(true);
+    }
+    if (j==4)
+    {
+        ui->R5_2->setVisible(false);
+        ui->R5_2->setValue(0);
+    }
+    if (j==5)
+    {
+        ui->R4_2->setVisible(false);
+        ui->R4_2->setValue(0);
+    }
+    if (j==6)
+    {
+        ui->R3_2->setVisible(false);
+        ui->R3_2->setValue(0);
+        j=0;
+    }
 }
 
