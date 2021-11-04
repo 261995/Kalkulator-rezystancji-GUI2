@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+
     ui->R3->setVisible(false);
     ui->R4->setVisible(false);
     ui->R5->setVisible(false);
@@ -24,6 +25,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->I4_2->setVisible(false);
     ui->I5_2->setVisible(false);
 
+    connect(ui->Szeregowo,SIGNAL(released()),this,SLOT(button_pressed1()));
+    connect(ui->Rownolegle,SIGNAL(released()),this,SLOT(button_pressed2()));
+
 }
 
 MainWindow::~MainWindow()
@@ -31,97 +35,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::valueChanged()
+void MainWindow::button_pressed1()
 {
-    connect(ui->R1,SIGNAL(valuechanged()),this,SLOT(Rez1()));
-    connect(ui->R2,SIGNAL(valuechanged()),this,SLOT(Rez2()));
-    connect(ui->R3,SIGNAL(valuechanged()),this,SLOT(Rez3()));
-    connect(ui->R4,SIGNAL(valuechanged()),this,SLOT(Rez4()));
-    connect(ui->R1_2,SIGNAL(valuechanged()),this,SLOT(Rez1_2()));
-    connect(ui->R2_2,SIGNAL(valuechanged()),this,SLOT(Rez2_2()));
-    connect(ui->R3_2,SIGNAL(valuechanged()),this,SLOT(Rez3_2()));
-    connect(ui->R4_2,SIGNAL(valuechanged()),this,SLOT(Rez4_2()));
+
 }
 
-void MainWindow::on_R1_valueChanged(double arg1)
+void MainWindow::button_pressed2()
 {
-    ui->Suma1->setText(QString::number(arg1 + ui->R2->value() + ui->R3->value() + ui->R4->value() + ui->R5->value()));
-}
-
-
-void MainWindow::on_R2_valueChanged(double arg1)
-{
-    ui->Suma1->setText(QString::number(arg1 + ui->R1->value() + ui->R3->value() + ui->R4->value() + ui->R5->value()));
-}
-
-void MainWindow::on_R3_valueChanged(double arg1)
-{
-    ui->Suma1->setText(QString::number(arg1 + ui->R1->value() + ui->R2->value() + ui->R4->value() + ui->R5->value()));
-}
-
-
-void MainWindow::on_R4_valueChanged(double arg1)
-{
-    ui->Suma1->setText(QString::number(arg1 + ui->R1->value() + ui->R2->value() + ui->R3->value() + ui->R5->value()));
-}
-
-
-void MainWindow::on_R5_valueChanged(double arg1)
-{
-    ui->Suma1->setText(QString::number(arg1 + ui->R1->value() + ui->R2->value() + ui->R3->value() + ui->R4->value()));
-}
-
-
-void MainWindow::on_R1_2_valueChanged(double arg1)
-{
-    if (ui->R2_2->value()!=0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R2_2->value() + 1/ui->R3_2->value() + 1/ui->R4_2->value() + 1/ui->R5_2->value())));
-    if (ui->R2_2->value()==0)
-    ui->Suma2->setText(QString::number(arg1));
-}
-
-
-void MainWindow::on_R2_2_valueChanged(double arg1)
-{
-    if (ui->R3_2->value()!=0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R3_2->value() + 1/ui->R4_2->value() + 1/ui->R5_2->value())));
-    if (ui->R3_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value())));
-    if (ui->R2_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/ui->R1_2->value())));
 
 }
 
 
-
-void MainWindow::on_R3_2_valueChanged(double arg1)
-{
-    if (ui->R4_2->value()!=0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R4_2->value() + 1/ui->R5_2->value())));
-    if (ui->R4_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R2_2->value())));
-    if (ui->R3_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/ui->R1_2->value() + 1/ui->R2_2->value())));
-}
-
-
-void MainWindow::on_R4_2_valueChanged(double arg1)
-{
-    if (ui->R5_2->value()!=0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R3_2->value() + 1/ui->R5_2->value())));
-    if (ui->R5_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R3_2->value())));
-    if (ui->R4_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R3_2->value())));
-}
-
-
-void MainWindow::on_R5_2_valueChanged(double arg1)
-{
-    ui->Suma2->setText(QString::number(1/(1/arg1 + 1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R4_2->value() + 1/ui->R5_2->value())));
-    if (ui->R5_2->value()==0)
-    ui->Suma2->setText(QString::number(1/(1/ui->R1_2->value() + 1/ui->R2_2->value() + 1/ui->R3_2->value() + 1/ui->R4_2->value())));
-}
 
 
 void MainWindow::on_czysc_clicked()

@@ -19,27 +19,9 @@ public:
 
 private slots:
 
-    void valueChanged();
+    void button_pressed1();
 
-    void on_R1_valueChanged(double arg1);
-
-    void on_R2_valueChanged(double arg1);
-
-    void on_R3_valueChanged(double arg1);
-
-    void on_R4_valueChanged(double arg1);
-
-    void on_R5_valueChanged(double arg1);
-
-    void on_R1_2_valueChanged(double arg1);
-
-    void on_R2_2_valueChanged(double arg1);
-
-    void on_R3_2_valueChanged(double arg1);
-
-    void on_R4_2_valueChanged(double arg1);
-
-    void on_R5_2_valueChanged(double arg1);
+    void button_pressed2();
 
     void on_czysc_clicked();
 
