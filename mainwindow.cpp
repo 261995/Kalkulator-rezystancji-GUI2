@@ -5,6 +5,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
     ui->R3->setVisible(false);
@@ -23,14 +24,23 @@ MainWindow::MainWindow(QWidget *parent)
     ui->I4_2->setVisible(false);
     ui->I5_2->setVisible(false);
 
-    ui->Suma1_2->setVisible(false);
-    ui->Suma2_2->setVisible(false);
-
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::valueChanged()
+{
+    connect(ui->R1,SIGNAL(valuechanged()),this,SLOT(Rez1()));
+    connect(ui->R2,SIGNAL(valuechanged()),this,SLOT(Rez2()));
+    connect(ui->R3,SIGNAL(valuechanged()),this,SLOT(Rez3()));
+    connect(ui->R4,SIGNAL(valuechanged()),this,SLOT(Rez4()));
+    connect(ui->R1_2,SIGNAL(valuechanged()),this,SLOT(Rez1_2()));
+    connect(ui->R2_2,SIGNAL(valuechanged()),this,SLOT(Rez2_2()));
+    connect(ui->R3_2,SIGNAL(valuechanged()),this,SLOT(Rez3_2()));
+    connect(ui->R4_2,SIGNAL(valuechanged()),this,SLOT(Rez4_2()));
 }
 
 void MainWindow::on_R1_valueChanged(double arg1)

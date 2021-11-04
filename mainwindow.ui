@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>722</width>
-    <height>484</height>
+    <width>584</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QPushButton" name="czysc">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>160</y>
-      <width>81</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -43,17 +43,17 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="konduktancja">
+   <widget class="QPushButton" name="Szeregowo">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>170</y>
+      <x>260</x>
+      <y>200</y>
       <width>151</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Oblicz konduktancję:</string>
+     <string>Oblicz szeregowo:</string>
     </property>
    </widget>
    <widget class="QDoubleSpinBox" name="R2">
@@ -107,9 +107,9 @@
    <widget class="QLabel" name="Suma1">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>90</y>
-      <width>111</width>
+      <x>420</x>
+      <y>190</y>
+      <width>141</width>
       <height>61</height>
      </rect>
     </property>
@@ -135,9 +135,9 @@
    <widget class="QLabel" name="Suma2">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>330</y>
-      <width>111</width>
+      <x>420</x>
+      <y>430</y>
+      <width>141</width>
       <height>61</height>
      </rect>
     </property>
@@ -419,14 +419,14 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>70</y>
-      <width>111</width>
+      <x>420</x>
+      <y>160</y>
+      <width>141</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Wynik</string>
+     <string>Wynik:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -435,78 +435,25 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>310</y>
-      <width>111</width>
+      <x>420</x>
+      <y>400</y>
+      <width>141</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Wynik</string>
+     <string>Wynik:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Suma2_2">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>400</y>
-      <width>111</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhFormattedNumbersOnly</set>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Suma1_2">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>160</y>
-      <width>111</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhFormattedNumbersOnly</set>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="Double" stdset="0">
-     <double>0.000000000000000</double>
     </property>
    </widget>
    <widget class="QPushButton" name="dodatkowe">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>160</y>
-      <width>221</width>
+      <x>20</x>
+      <y>200</y>
+      <width>211</width>
       <height>31</height>
      </rect>
     </property>
@@ -514,25 +461,25 @@
      <string>Dodaj/usuń dodatkowe rezystory</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="konduktancja_3">
+   <widget class="QPushButton" name="Rownolegle">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>410</y>
+      <x>260</x>
+      <y>440</y>
       <width>151</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Oblicz konduktancję:</string>
+     <string>Oblicz równolegle:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dodatkowe_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>400</y>
-      <width>221</width>
+      <x>20</x>
+      <y>440</y>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -543,9 +490,9 @@
    <widget class="QPushButton" name="czysc_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>400</y>
-      <width>81</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -558,7 +505,7 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>671</width>
+      <width>541</width>
       <height>51</height>
      </rect>
     </property>
@@ -576,9 +523,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>250</y>
-      <width>671</width>
-      <height>51</height>
+      <y>240</y>
+      <width>541</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
