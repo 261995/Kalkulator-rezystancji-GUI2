@@ -138,59 +138,14 @@ void MainWindow::on_dodatkowe_2_clicked()
     }
 }
 
-void MainWindow::on_R1_valueChanged(double R1)
+void MainWindow::button_pressed1()
 {
-    R1 = (ui->R1->value());
-}
+    R1 = ui->R1->value();
+    R2 = ui->R1->value();
+    R3 = ui->R1->value();
+    R4 = ui->R1->value();
+    R5 = ui->R1->value();
 
-void MainWindow::on_R2_valueChanged(double R2)
-{
-    R2 = (ui->R2->value());
-}
-
-void MainWindow::on_R3_valueChanged(double R3)
-{
-    R3 = (ui->R3->value());
-}
-
-void MainWindow::on_R4_valueChanged(double R4)
-{
-    R4 = (ui->R4->value());
-}
-
-void MainWindow::on_R5_valueChanged(double R5)
-{
-    R5 = (ui->R5->value());
-}
-
-void MainWindow::on_R1_2_valueChanged(double R1_2)
-{
-    R1_2 = (ui->R1_2->value());
-}
-
-void MainWindow::on_R2_2_valueChanged(double R2_2)
-{
-    R2_2 = (ui->R2_2->value());
-}
-
-void MainWindow::on_R3_2_valueChanged(double R3_2)
-{
-    R3_2 = (ui->R3_2->value());
-}
-
-void MainWindow::on_R4_2_valueChanged(double R4_2)
-{
-    R4_2 = (ui->R4_2->value());
-}
-
-void MainWindow::on_R5_2_valueChanged(double R5_2)
-{
-    R5_2 = (ui->R5_2->value());
-}
-
-
-void MainWindow::button_pressed1(double R1, double R2, double R3, double R4, double R5)
-{
     if (ui->R3->value()==0)
     Suma11 = R1 + R2;
     else if (ui->R4->value()==0)
@@ -210,6 +165,18 @@ void MainWindow::button_pressed1(double R1, double R2, double R3, double R4, dou
 
 void MainWindow::button_pressed2()
 {
+    R1_2 = ui->R1->value();
+    R2_2 = ui->R1->value();
+    R3_2 = ui->R1->value();
+    R4_2 = ui->R1->value();
+    R5_2 = ui->R1->value();
+
     Suma22 = R1_2 + R2_2 + R3_2 + R4_2 + R5_2;
+
+    QString nowaSuma;
+
+    nowaSuma = QString::number(Suma22);
+
+    ui->Suma2->setText(nowaSuma);
 
 }
