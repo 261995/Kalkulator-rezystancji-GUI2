@@ -189,9 +189,9 @@ void MainWindow::button_pressed2()
 }
 
 
-bool writeFile1(QString filename)
+bool writeFile1(QString filename1, QString nowaSuma1)
 {
-    QFile file(filename);
+    QFile file(filename1);
     if(!file.open(QIODevice::WriteOnly))
     {
         qCritical() << "Could not open the file!";
@@ -201,11 +201,32 @@ bool writeFile1(QString filename)
 
     QTextStream stream(&file);
 
-    stream << QString::number(0) << Suma1;
+    stream << QString::number(0) <<  nowaSuma1;
     return true;
 }
 
 void MainWindow::on_Write1_clicked()
 {
-    writeFile1(filename);
+    writeFile1(filename1, nowaSuma1);
+}
+
+bool writeFile2(QString filename2, QString nowaSuma2)
+{
+    QFile file(filename2);
+    if(!file.open(QIODevice::WriteOnly))
+    {
+        qCritical() << "Could not open the file!";
+        qCritical() << file.errorString();
+        return false;
+    }
+
+    QTextStream stream(&file);
+
+    stream << QString::number(0) <<  nowaSuma2;
+    return true;
+}
+
+void MainWindow::on_Write2_clicked()
+{
+    writeFile2(filename2, nowaSuma2);
 }

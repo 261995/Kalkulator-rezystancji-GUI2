@@ -35,7 +35,8 @@ public:
     QString nowaSuma1;
     QString nowaSuma2;
 
-    QString filename = "wynik_szeregowo.txt";
+    QString filename1 = "wynik_szeregowo.txt";
+    QString filename2 = "wynik_rownolegle.txt";
 
 private slots:
 
@@ -52,6 +53,8 @@ private slots:
     void on_dodatkowe_2_clicked();
 
     void on_Write1_clicked();
+
+    void on_Write2_clicked();
 
 private:
     Ui::MainWindow *ui;
