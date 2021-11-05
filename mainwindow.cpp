@@ -189,9 +189,9 @@ void MainWindow::button_pressed2()
 }
 
 
-bool writeFile1("wynik_szeregowo.txt", QString nowaSuma2)
+bool writeFile1(QString filename)
 {
-    QFile file("wynik_szeregowo.txt");
+    QFile file(filename);
     if(!file.open(QIODevice::WriteOnly))
     {
         qCritical() << "Could not open the file!";
@@ -201,11 +201,11 @@ bool writeFile1("wynik_szeregowo.txt", QString nowaSuma2)
 
     QTextStream stream(&file);
 
-    stream << QString::number(0) << nowaSuma2;
+    stream << QString::number(0) << Suma1;
     return true;
 }
 
 void MainWindow::on_Write1_clicked()
 {
-    writeFile1("wynik_szeregowo.txt", nowaSuma2);
+    writeFile1(filename);
 }

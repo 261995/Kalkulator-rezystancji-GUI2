@@ -35,6 +35,8 @@ public:
     QString nowaSuma1;
     QString nowaSuma2;
 
+    QString filename = "wynik_szeregowo.txt";
+
 private slots:
 
     void button_pressed1();
