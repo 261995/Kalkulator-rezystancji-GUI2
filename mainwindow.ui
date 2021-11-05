@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>584</width>
-    <height>526</height>
+    <width>641</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -536,6 +536,58 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Write1">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>260</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zapis do pliku</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Write2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>500</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zapis do pliku</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Read1">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>160</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Odczyt z pliku</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Read1_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>400</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Odczyt z pliku</string>
     </property>
    </widget>
   </widget>

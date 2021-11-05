@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFile>
+#include <QTextStream>
+#include <QCoreApplication>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -141,10 +144,10 @@ void MainWindow::on_dodatkowe_2_clicked()
 void MainWindow::button_pressed1()
 {
     R1 = ui->R1->value();
-    R2 = ui->R1->value();
-    R3 = ui->R1->value();
-    R4 = ui->R1->value();
-    R5 = ui->R1->value();
+    R2 = ui->R2->value();
+    R3 = ui->R3->value();
+    R4 = ui->R4->value();
+    R5 = ui->R5->value();
 
     if (ui->R3->value()==0)
     Suma11 = R1 + R2;
@@ -155,28 +158,55 @@ void MainWindow::button_pressed1()
     else
     Suma11 = R1 + R2 + R3 + R4 + R5;
 
-    QString nowaSuma;
 
-    nowaSuma = QString::number(Suma11);
+    nowaSuma1 = QString::number(Suma11);
 
-    ui->Suma1->setText(nowaSuma);
+    ui->Suma1->setText(nowaSuma1);
 
 }
 
 void MainWindow::button_pressed2()
 {
-    R1_2 = ui->R1->value();
-    R2_2 = ui->R1->value();
-    R3_2 = ui->R1->value();
-    R4_2 = ui->R1->value();
-    R5_2 = ui->R1->value();
+    R1_2 = ui->R1_2->value();
+    R2_2 = ui->R2_2->value();
+    R3_2 = ui->R3_2->value();
+    R4_2 = ui->R4_2->value();
+    R5_2 = ui->R5_2->value();
 
-    Suma22 = R1_2 + R2_2 + R3_2 + R4_2 + R5_2;
+    if (ui->R3_2->value()==0)
+    Suma22 = 1/R1_2 + 1/R2_2;
+    else if (ui->R4_2->value()==0)
+    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2;
+    else if (ui->R5_2->value()==0)
+    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2 + 1/R4_2;
+    else
+    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2 + 1/R4_2 + 1/R5_2;
 
-    QString nowaSuma;
+    nowaSuma2 = QString::number(Suma22);
 
-    nowaSuma = QString::number(Suma22);
+    ui->Suma2->setText(nowaSuma2);
 
-    ui->Suma2->setText(nowaSuma);
+}
+
+
+bool writeFile1(QString filename, QString nowaSuma2)
+{
+    QFile file(filename);
+    if(!file.open(QIODevice::WriteOnly))
+    {
+        qCritical() << "Could not open the file!";
+        qCritical() << file.errorString();
+        return false;
+    }
+
+    QTextStream stream(&file);
+
+    stream << QString::number(0) << nowaSuma2;
+    return true;
+}
+
+void MainWindow::on_Write1_clicked()
+{
+    writeFile1("wynik_szeregowo.txt", QString nowaSuma2);
 
 }
