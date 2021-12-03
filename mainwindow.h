@@ -38,6 +38,9 @@ public:
     QString filename1 = "wynik_szeregowo.txt";
     QString filename2 = "wynik_rownolegle.txt";
 
+    double SumaS;
+    double SumaR;
+
 private slots:
 
     void button_pressed1();
