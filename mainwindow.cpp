@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "dzialania.cpp"
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QTextStream>
@@ -230,3 +231,21 @@ void MainWindow::on_Write2_clicked()
 {
     writeFile2(filename2, nowaSuma2);
 }
+
+
+
+void MainWindow::on_Szeregowo_clicked()
+{
+    SumaS = QString::number(Suma11);
+
+    ui->Suma1->setText(SumaS);
+
+}
+
+
+void MainWindow::on_Rownolegle_clicked()
+{
+    ui->Suma2->setText(SumaR);
+
+}
+

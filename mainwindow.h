@@ -43,10 +43,6 @@ public:
 
 private slots:
 
-    void button_pressed1();
-
-    void button_pressed2();
-
     void on_czysc_clicked();
 
     void on_dodatkowe_clicked();
@@ -58,6 +54,10 @@ private slots:
     void on_Write1_clicked();
 
     void on_Write2_clicked();
+
+    void on_Szeregowo_clicked();
+
+    void on_Rownolegle_clicked();
 
 private:
     Ui::MainWindow *ui;
