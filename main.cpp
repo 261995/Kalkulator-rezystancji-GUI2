@@ -13,16 +13,22 @@ int main(int argc, char *argv[])
 
 class Dzialania
 {
-    QVector<float> szeregowo;
-    QVector<float> rownolegle;
-    QStringList nazwyR = {double R1, double R2, double R3, double R4, double R5};
+    QVector<double> szeregowo;
+    QVector<double> rownolegle;
+    QList<double> rezystory;
+    QList<double> rezystory_R;
 
-    void dodaj_szeregowo(QVector<float> szeregowo, QList<QString> nazwyR)
+void constr_func(double R1, double R2, double R3, double R4, double R5){
+rezystory << R1 << R2 << R3 << R4 << R5;
+}
+
+
+    void dodaj_szeregowo(QVector<double> szeregowo, QList<double> rezystory)
     {
-        for (int i = 0; i < nazwyR.size(); i++)
-            if (nazwyR.at(i) != "")
+        for (int i = 0; i < rezystory.size(); i++)
+            if (rezystory[i] != 0)
             {
-            szeregowo.push_back(nazwyR.at(i));
+            szeregowo.push_back(rezystory.at(i));
             }
             else
             {
@@ -30,12 +36,12 @@ class Dzialania
             }
     }
 
-    void dodaj_rownolegle(QVector<float> rownolegle, QList<QString> nazwyR)
+    void dodaj_rownolegle(QVector<double> rownolegle, QList<double> rezystory_R)
     {
-        for (int i = 0; i < nazwyR.size(); i++)
-            if (nazwyR.at(i) != "")
+        for (int i = 0; i < rezystory_R.size(); i++)
+            if (rezystory_R.at(i) != 0)
             {
-            rownolegle.push_back(nazwyR.at(i));
+            rownolegle.append(rezystory_R.at(i));
             }
             else
             {
@@ -44,16 +50,32 @@ class Dzialania
     }
 
 
-    void dodawanie_szeregowo(QVector<float> szeregowo)
+    void dodawanie_szeregowo(QVector<double> szeregowo, double SumaS){
             for (int i = 0; i < szeregowo.size();  i++)
-                if (szeregowo(i) != 0)
+                if (szeregowo[i] != 0)
                 {
-                SumaS = Suma + szeregowo(i);
+                SumaS = SumaS + szeregowo[i];
                 }
                 else
                 {
                 break;
                 }
+    }
+
+    void dodawanie_rownolegle(QVector<double> rownolegle, double SumaR){
+            for (int i = 0; i < rownolegle.size();  i++)
+                if (rownolegle[i] != 0)
+                {
+                SumaR = SumaR + rownolegle[i];
+                }
+                else
+                {
+                break;
+                }
+    }
+
+
+
 
 
 };
