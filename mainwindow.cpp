@@ -183,15 +183,23 @@ void MainWindow::on_Write2_clicked()
 
 
 
-void MainWindow::on_Szeregowo_clicked(double SumaS)
+void MainWindow::on_Szeregowo_clicked(double SumaS,double R1,double R2,double R3,double R4,double R5)
 { 
+    Dzialania szeregowo;
+    szeregowo.dodaj_szeregowo({R1, R2, R3, R4, R5});
+    szeregowo.dodawanie_szeregowo(SumaS);
+
     ui->Suma1->setNum(SumaS);
 
 }
 
 
-void MainWindow::on_Rownolegle_clicked(double SumaR)
+void MainWindow::on_Rownolegle_clicked(double SumaR,double R1_2,double R2_2,double R3_2,double R4_2,double R5_2)
 {
+    Dzialania rownolegle;
+    rownolegle.dodaj_rownolegle({R1_2, R2_2, R3_2, R4_2, R5_2});
+    rownolegle.dodawanie_rownolegle(SumaR);
+
     ui->Suma2->setNum(SumaR);
 }
 

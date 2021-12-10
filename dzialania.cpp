@@ -33,18 +33,20 @@ void Dzialania::dodaj_rownolegle(QList<double> rezystory_R)
 }
 
 
-void Dzialania::dodawanie_szeregowo(double SumaS){
+double Dzialania::dodawanie_szeregowo(double SumaS){
     for (int i = 0; i < szeregowo.size();  i++)
         if (szeregowo[i] != 0)
             SumaS = SumaS + szeregowo[i];
         else
-            return;
+            return 0;
+    return SumaS;
 }
 
-void Dzialania::dodawanie_rownolegle(double SumaR){
+double Dzialania::dodawanie_rownolegle(double SumaR){
     for (int i = 0; i < rownolegle.size();  i++)
         if (rownolegle[i] != 0)
             SumaR = SumaR + (1/rownolegle[i]);
         else
-            return;
+            return 0;
+    return SumaR;
 }

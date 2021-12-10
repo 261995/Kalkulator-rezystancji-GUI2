@@ -47,9 +47,9 @@ private slots:
 
     void on_Write2_clicked();
 
-    void on_Szeregowo_clicked(double SumaS);
+    void on_Szeregowo_clicked(double SumaS,double R1,double R2,double R3,double R4,double R5);
 
-    void on_Rownolegle_clicked(double SumaS);
+    void on_Rownolegle_clicked(double SumaR,double R1_2,double R2_2,double R3_2,double R4_2,double R5_2);
 
 private:
     Ui::MainWindow *ui;
