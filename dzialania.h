@@ -13,8 +13,6 @@ class Dzialania
         QList<double> rezystory;
         QList<double> rezystory_R;
 
-        Dzialania(QList<double> rezystory, QList<double> rezystory_R, QVector<double> szeregowo, QVector<double> rownolegle);
-
         void dodaj_szeregowo(QList<double> rezystory);
 
         void dodaj_rownolegle(QList<double> rezystory_R);
