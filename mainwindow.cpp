@@ -1,5 +1,4 @@
-#include "mainwindow.h"
-#include "dzialania.cpp"
+#include "dzialania.h"
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QTextStream>
@@ -29,16 +28,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->I4_2->setVisible(false);
     ui->I5_2->setVisible(false);
 
-    connect(ui->Szeregowo,SIGNAL(released()),this,SLOT(button_pressed1()));
-    connect(ui->Rownolegle,SIGNAL(released()),this,SLOT(button_pressed2()));
+    connect(ui->Szeregowo,SIGNAL(released()),this,SLOT(Szeregowo_clicked()));
+    connect(ui->Rownolegle,SIGNAL(released()),this,SLOT(Rownolegle_clicked2()));
 
 }
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
 
 
 void MainWindow::on_czysc_clicked()
@@ -142,55 +135,10 @@ void MainWindow::on_dodatkowe_2_clicked()
     }
 }
 
-void MainWindow::button_pressed1()
-{
-    R1 = ui->R1->value();
-    R2 = ui->R2->value();
-    R3 = ui->R3->value();
-    R4 = ui->R4->value();
-    R5 = ui->R5->value();
+QString filename1 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_szeregowo.txt";
+QString filename2 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_rownolegle.txt";
 
-    if (ui->R3->value()==0)
-    Suma11 = R1 + R2;
-    else if (ui->R4->value()==0)
-    Suma11 = R1 + R2 + R3;
-    else if (ui->R5->value()==0)
-    Suma11 = R1 + R2 + R3 + R4;
-    else
-    Suma11 = R1 + R2 + R3 + R4 + R5;
-
-
-    nowaSuma1 = QString::number(Suma11);
-
-    ui->Suma1->setText(nowaSuma1);
-
-}
-
-void MainWindow::button_pressed2()
-{
-    R1_2 = ui->R1_2->value();
-    R2_2 = ui->R2_2->value();
-    R3_2 = ui->R3_2->value();
-    R4_2 = ui->R4_2->value();
-    R5_2 = ui->R5_2->value();
-
-    if (ui->R3_2->value()==0)
-    Suma22 = 1/R1_2 + 1/R2_2;
-    else if (ui->R4_2->value()==0)
-    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2;
-    else if (ui->R5_2->value()==0)
-    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2 + 1/R4_2;
-    else
-    Suma22 = 1/R1_2 + 1/R2_2 + 1/R3_2 + 1/R4_2 + 1/R5_2;
-
-    nowaSuma2 = QString::number(Suma22);
-
-    ui->Suma2->setText(nowaSuma2);
-
-}
-
-
-bool writeFile1(QString filename1, QString nowaSuma1)
+bool writeFile1(QString filename1, double SumaS)
 {
     QFile file(filename1);
     if(!file.open(QIODevice::WriteOnly))
@@ -202,16 +150,16 @@ bool writeFile1(QString filename1, QString nowaSuma1)
 
     QTextStream stream(&file);
 
-    stream << QString::number(0) <<  nowaSuma1;
+    stream << QString::number(0) <<  SumaS;
     return true;
 }
 
 void MainWindow::on_Write1_clicked()
 {
-    writeFile1(filename1, nowaSuma1);
+    writeFile1(filename1, SumaS);
 }
 
-bool writeFile2(QString filename2, QString nowaSuma2)
+bool writeFile2(QString filename2, double SumaR)
 {
     QFile file(filename2);
     if(!file.open(QIODevice::WriteOnly))
@@ -223,29 +171,30 @@ bool writeFile2(QString filename2, QString nowaSuma2)
 
     QTextStream stream(&file);
 
-    stream << QString::number(0) <<  nowaSuma2;
+    stream << QString::number(0) <<  SumaR;
     return true;
 }
 
 void MainWindow::on_Write2_clicked()
 {
-    writeFile2(filename2, nowaSuma2);
+    writeFile2(filename2, SumaR);
 }
 
 
 
-void MainWindow::on_Szeregowo_clicked()
+void MainWindow::on_Szeregowo_clicked(double SumaS)
+{ 
+    ui->Suma1->setNum(SumaS);
+
+}
+
+
+void MainWindow::on_Rownolegle_clicked(double SumaR)
 {
-    SumaS = QString::number(Suma11);
-
-    ui->Suma1->setText(SumaS);
-
+    ui->Suma2->setNum(SumaR);
 }
 
-
-void MainWindow::on_Rownolegle_clicked()
+MainWindow::~MainWindow()
 {
-    ui->Suma2->setText(SumaR);
-
+    delete ui;
 }
-

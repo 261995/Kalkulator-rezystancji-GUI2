@@ -38,7 +38,7 @@ void Dzialania::dodawanie_szeregowo(double SumaS){
         if (szeregowo[i] != 0)
             SumaS = SumaS + szeregowo[i];
         else
-            break;
+            return;
 }
 
 void Dzialania::dodawanie_rownolegle(double SumaR){
@@ -46,5 +46,5 @@ void Dzialania::dodawanie_rownolegle(double SumaR){
         if (rownolegle[i] != 0)
             SumaR = SumaR + (1/rownolegle[i]);
         else
-            break;
+            return;
 }
