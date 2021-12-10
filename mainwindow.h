@@ -35,9 +35,6 @@ public:
     double Suma11;
     double Suma22;
 
-    QString nowaSuma1;
-    QString nowaSuma2;
-
     QString filename1 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_szeregowo.txt";
     QString filename2 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_rownolegle.txt";
 
