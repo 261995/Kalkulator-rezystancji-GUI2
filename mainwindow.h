@@ -32,12 +32,6 @@ public:
     double SumaS;
     double SumaR;
 
-    double Suma11;
-    double Suma22;
-
-    QString filename1 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_szeregowo.txt";
-    QString filename2 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_rownolegle.txt";
-
 
 private slots:
 
@@ -53,9 +47,9 @@ private slots:
 
     void on_Write2_clicked();
 
-    void on_Szeregowo_clicked();
+    void on_Szeregowo_clicked(double SumaS);
 
-    void on_Rownolegle_clicked();
+    void on_Rownolegle_clicked(double SumaS);
 
 private:
     Ui::MainWindow *ui;
