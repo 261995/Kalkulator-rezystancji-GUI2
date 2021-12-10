@@ -44,7 +44,7 @@ void Dzialania::dodawanie_szeregowo(double SumaS){
 void Dzialania::dodawanie_rownolegle(double SumaR){
     for (int i = 0; i < rownolegle.size();  i++)
         if (rownolegle[i] != 0)
-            SumaR = SumaR + rownolegle[i];
+            SumaR = SumaR + (1/rownolegle[i]);
         else
             break;
 }
