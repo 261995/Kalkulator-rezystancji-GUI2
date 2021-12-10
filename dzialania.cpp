@@ -16,9 +16,9 @@ void Dzialania::constr_func2(double R1_2, double R2_2, double R3_2, double R4_2,
 
 void Dzialania::dodaj_szeregowo(QList<double> rezystory)
 {
-    for (QList<double>::iterator i = rezystory.begin(); i < rezystory.end(); i++)
-        if (rezystory[*i] != 0)
-            szeregowo.push_back(*i);
+    for (int i = 0; i < rezystory.size(); i++)
+        if (rezystory[i] != 0)
+            szeregowo.push_back(i);
         else
             return;
 }
