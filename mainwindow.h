@@ -29,17 +29,18 @@ public:
     double R4_2;
     double R5_2;
 
+    double SumaS;
+    double SumaR;
+
     double Suma11;
     double Suma22;
 
     QString nowaSuma1;
     QString nowaSuma2;
 
-    QString filename1 = "wynik_szeregowo.txt";
-    QString filename2 = "wynik_rownolegle.txt";
+    QString filename1 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_szeregowo.txt";
+    QString filename2 = "F:\\261995\\Kalkulator-rezystancji-GUI\\wynik_rownolegle.txt";
 
-    double SumaS;
-    double SumaR;
 
 private slots:
 

@@ -11,10 +11,10 @@ CONFIG += c++11
 SOURCES += \
     dzialania.cpp \
     main.cpp \
-    mainwindow.cpp \
-    testowa.cpp
+    mainwindow.cpp
 
 HEADERS += \
+    dzialania.h \
     mainwindow.h
 
 FORMS += \
