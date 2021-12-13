@@ -29,9 +29,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->I4_2->setVisible(false);
     ui->I5_2->setVisible(false);
 
-    connect(ui->Szeregowo,SIGNAL(released()),this,SLOT(Szeregowo_clicked()));
-    connect(ui->Rownolegle,SIGNAL(released()),this,SLOT(Rownolegle_clicked2()));
-
 }
 
 
@@ -182,28 +179,77 @@ void MainWindow::on_Write2_clicked()
 }
 
 
-
-void MainWindow::on_Szeregowo_clicked(double SumaS,double R1,double R2,double R3,double R4,double R5)
-{ 
+void MainWindow::on_Szeregowo_clicked()
+{
     Dzialania szeregowo;
+    SumaS=0;
     szeregowo.dodaj_szeregowo({R1, R2, R3, R4, R5});
-    szeregowo.dodawanie_szeregowo(SumaS);
-
+    SumaS = szeregowo.dodawanie_szeregowo(SumaS);
     ui->Suma1->setNum(SumaS);
-
 }
 
 
-void MainWindow::on_Rownolegle_clicked(double SumaR,double R1_2,double R2_2,double R3_2,double R4_2,double R5_2)
+void MainWindow::on_Rownolegle_clicked()
 {
     Dzialania rownolegle;
+    SumaR=0;
     rownolegle.dodaj_rownolegle({R1_2, R2_2, R3_2, R4_2, R5_2});
-    rownolegle.dodawanie_rownolegle(SumaR);
-
+    SumaR = rownolegle.dodawanie_rownolegle(SumaR);
     ui->Suma2->setNum(SumaR);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::on_R1_valueChanged(double R1)
+{
+    this->R1 = R1;
+}
+
+void MainWindow::on_R2_valueChanged(double R2)
+{
+    this->R2 = R2;
+}
+
+void MainWindow::on_R3_valueChanged(double R3)
+{
+    this->R3 = R3;
+}
+
+void MainWindow::on_R4_valueChanged(double R4)
+{
+    this->R4 = R4;
+}
+
+void MainWindow::on_R5_valueChanged(double R5)
+{
+    this->R5 = R5;
+}
+
+void MainWindow::on_R1_2_valueChanged(double R1_2)
+{
+    this->R1_2 = R1_2;
+}
+
+void MainWindow::on_R2_2_valueChanged(double R2_2)
+{
+    this->R2_2 = R2_2;
+}
+
+void MainWindow::on_R3_2_valueChanged(double R3_2)
+{
+    this->R3_2 = R3_2;
+}
+
+void MainWindow::on_R4_2_valueChanged(double R4_2)
+{
+    this->R4_2 = R4_2;
+}
+
+void MainWindow::on_R5_2_valueChanged(double R5_2)
+{
+    this->R5_2 = R5_2;
 }

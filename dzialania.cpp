@@ -18,7 +18,7 @@ void Dzialania::dodaj_szeregowo(QList<double> rezystory)
 {
     for (int i = 0; i < rezystory.size(); i++)
         if (rezystory[i] != 0)
-            szeregowo.push_back(i);
+            szeregowo.push_back(rezystory[i]);
         else
             return;
 }
